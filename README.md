@@ -26,7 +26,7 @@ sudo rm -f /usr/local/share/man/man8/sleepwatcher.8
 
 ---
 
-### ⬇️ **3. Download and Reinstall SleepWatcher**
+### ⬇️ **3. Download and (Re)install SleepWatcher**
 
 ```bash
 # download sleepwatcher package, untar, and cd into directory
