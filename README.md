@@ -1,6 +1,6 @@
 # Wakeup_bluetooth_fix
 
-It will execute "sudo pkill bluetoothd" when the system goes to sleep (S3, S4) by **SleepWatcher**
+It will execute the command 'sudo pkill bluetoothd' when the system enters sleep mode (S3, S4) using SleepWatcher
 
 ---
 
