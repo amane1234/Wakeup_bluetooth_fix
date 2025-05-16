@@ -16,8 +16,8 @@ sudo -v
 ### 🚫 **2. Uninstall Existing SleepWatcher (Optional)**
 
 ```bash
-sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 2>/dev/null
-launchctl unload ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist 2>/dev/null
+sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 
+launchctl unload ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist
 sudo rm -f /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist
 rm -f ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist
 sudo rm -f /usr/local/sbin/sleepwatcher
@@ -30,8 +30,8 @@ sudo rm -f /usr/local/share/man/man8/sleepwatcher.8
 
 ```bash
 # download sleepwatcher package, untar, and cd into directory
-curl --remote-name "http://www.bernhard-baehr.de/sleepwatcher_2.2.1.tgz"
-tar xvzf sleepwatcher_2.2.1.tgz 2>/dev/null
+curl --remote-name "https://www.bernhard-baehr.de/sleepwatcher_2.2.1.tgz"
+tar xvzf sleepwatcher_2.2.1.tgz
 cd sleepwatcher_2.2.1
 ```
 
@@ -84,5 +84,14 @@ echo "YOUR_PASSWORD" | sudo -S pkill bluetoothd
 ```
 
 * You must replace "Your_PASSWORD" into your Sudo password.
+
+---
+
+### **6. Cleanup**
+
+```bash
+rm ~/sleepwatcher_2.2.1.tgz
+rm -r ~/sleepwatcher_2.2.1
+```
 
 ---
