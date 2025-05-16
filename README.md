@@ -3,26 +3,14 @@ Fixing bluetooth by turning off when the systems goes to sleep (S3,S4). It utili
 
 ---
 
-### 🛠️ **Acquire Sudo Privileges**
+### 🛠️ **1. Acquire Sudo Privileges**
 
 ```bash
 sudo -v
 ```
 
-* Prompts for your password and updates the user's cached `sudo` credentials, so you don’t have to keep re-entering it.
 
-```bash
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-```
-
-* Keeps the `sudo` session alive by running `sudo -n true` every 60 seconds.
-* `kill -0 "$$"` checks if the current shell is still running, and exits if it's not.
-* This runs in the background and keeps `sudo` active while the script completes.
-
----
-
-### 🚫 **Uninstall Existing SleepWatcher (Cleanup)**
+### 🚫 **2. Uninstall Existing SleepWatcher (Cleanup)**
 
 ```bash
 # unload launch agents
