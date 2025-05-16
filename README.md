@@ -71,7 +71,6 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 
 ---
 
-
 ### 🚫 **5. Turn-off Bluetooth when system goes sleep**
 
 ```bash
@@ -80,7 +79,7 @@ sudo nano /etc/rc.sleep
 ```
 
 ```bash
-# Add pkill bluetoothd in your /etc/rc.sleep
+# Add the following line to your /etc/rc.sleep
 echo "YOUR_PASSWORD" | sudo -S pkill bluetoothd
 ```
 
