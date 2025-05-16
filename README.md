@@ -1,6 +1,6 @@
 # Wakeup_bluetooth_fix
 
-It will execute the command 'sudo pkill bluetoothd' when the system enters sleep mode (S3, S4) using SleepWatcher
+It will execute the command 'sudo pkill bluetoothd' when the system enters sleep mode (S3, S4) & wake-up using SleepWatcher
 
 ---
 
@@ -70,15 +70,21 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 
 ---
 
-### 🚫 **5. Turn-off Bluetooth when system goes sleep**
+### 🚫 **5. Turn-off Bluetooth when system goes sleep & Wakes up**
 
 ```bash
 # Open /etc/rc.sleep with nano
 sudo nano /etc/rc.sleep
+
+# Add the following line to your /etc/rc.sleep
+echo "YOUR_PASSWORD" | sudo -S pkill bluetoothd
 ```
 
 ```bash
-# Add the following line to your /etc/rc.sleep
+# Open /etc/rc.wakeup with nano
+sudo nano /etc/rc.wakeup
+
+# Add the following line to your /etc/rc.wakeup
 echo "YOUR_PASSWORD" | sudo -S pkill bluetoothd
 ```
 
