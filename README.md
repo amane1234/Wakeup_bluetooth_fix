@@ -67,7 +67,7 @@ sudo touch /etc/rc.sleep
 sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 ```
 
-* It creates placeholder files that SleepWatcher will look for and run when the system wakes up or goes to sleep.
+* It creates placeholder files (rc.wakeup, rc.sleep) that SleepWatcher will look for and run when the system wakes up or goes to sleep.
 
 ---
 
