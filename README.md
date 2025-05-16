@@ -10,45 +10,31 @@ Only Macos
 sudo -v
 ```
 
+---
 
 ### 🚫 **2. Uninstall Existing SleepWatcher (Cleanup)**
 
 ```bash
-# unload launch agents
 sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 2>/dev/null
 launchctl unload ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist 2>/dev/null
-```
-
-* Stops existing SleepWatcher daemons (both system-wide and user-specific).
-
-```bash
-# remove plist launchagents
 sudo rm -f /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist
 rm -f ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist
-```
-
-* Deletes the configuration files (`plist`) that define how and when the daemon runs.
-
-```bash
-# remove executable and man files
 sudo rm -f /usr/local/sbin/sleepwatcher
 sudo rm -f /usr/local/share/man/man8/sleepwatcher.8
 ```
 
-* Deletes the actual SleepWatcher binary and its manual entry from your system.
-
 ---
 
-### ⬇️ **Download and Reinstall SleepWatcher**
+### ⬇️ **3.Download and Reinstall SleepWatcher**
 
 ```bash
 # download sleepwatcher package, untar, and cd into directory
-curl --remote-name "http://www.bernhard-baehr.de/sleepwatcher_2.2.tgz"
-tar xvzf sleepwatcher_2.2.tgz 2>/dev/null
-cd sleepwatcher_2.2
+curl --remote-name "http://www.bernhard-baehr.de/sleepwatcher_2.2.1.tgz"
+tar xvzf sleepwatcher_2.2.1.tgz 2>/dev/null
+cd sleepwatcher_2.2.1
 ```
 
-* Downloads and extracts the SleepWatcher version 2.2 package.
+* Downloads and extracts the SleepWatcher version 2.2.1 package, you may change the version of Sleepwatcher.
 
 ```bash
 # create folders necessary for installation
