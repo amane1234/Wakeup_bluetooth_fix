@@ -67,7 +67,10 @@ sudo touch /etc/rc.sleep
 sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 ```
 
-* Creates placeholder files that SleepWatcher will look for and run when the system wakes up or goes to sleep.
+* It creates placeholder files that SleepWatcher will look for and run when the system wakes up or goes to sleep.
+
+---
+
 
 ### 🚫 **5. Turn-off Bluetooth when system goes sleep**
 
