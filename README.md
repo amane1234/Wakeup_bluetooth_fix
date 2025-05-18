@@ -4,7 +4,7 @@ It will execute the command 'sudo pkill bluetoothd' when the system enters sleep
 
 ---
 
-### 🛠️ **1. Acquire Sudo Privileges**
+### **1. Acquire Sudo Privileges**
 
 ```bash
 sudo -v
@@ -12,7 +12,7 @@ sudo -v
 
 ---
 
-### 🚫 **2. Uninstall Existing SleepWatcher (Optional)**
+### **2. Uninstall Existing SleepWatcher (Optional)**
 
 ```bash
 sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 
@@ -25,7 +25,7 @@ sudo rm -f /usr/local/share/man/man8/sleepwatcher.8
 
 ---
 
-### ⬇️ **3. Download and (Re)install SleepWatcher**
+### **3. Download and (Re)install SleepWatcher**
 
 ```bash
 # download sleepwatcher package, untar, and cd into directory
@@ -50,7 +50,7 @@ sudo cp config/de.bernhard-baehr.sleepwatcher-20compatibility.plist /Library/Lau
 
 ---
 
-### ✅ **4. Enable and Configure SleepWatcher**
+### **4. Enable and Configure SleepWatcher**
 
 
 ```bash
@@ -70,7 +70,7 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 
 ---
 
-### 🚫 **5. Turn-off Bluetooth when system goes sleep & Wakes up**
+### **5. Turn-off Bluetooth when system goes sleep & Wakes up**
 
 ```bash
 # Open /etc/rc.sleep with nano
