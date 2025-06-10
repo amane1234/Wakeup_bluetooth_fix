@@ -91,7 +91,7 @@ exit 0
 
 ---
 
-### **6. Modify sudoer to learn sudo command in automated script**
+### **6. Modify sudoers to run sudo command in automated script**
 
 ```bash
 # Open /etc/sudoers with nano
