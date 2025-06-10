@@ -94,10 +94,12 @@ exit 0
 ### **6. Modify sudoer to learn sudo command in automated script**
 
 ```bash
+# Open /etc/sudoers with nano
 sudo nano /etc/sudoers
 ```
 
 ```bash
+# Add the following line to the suoders
 username ALL=(ALL) NOPASSWD: /etc/rc.sleep pkill
 ```
 * You may replace username into your account's name
