@@ -70,21 +70,40 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 
 ---
 
-### **5. pkill bluetoothd when system wakes up**
+### **5. pkill bluetoothd when system goes sleep**
 
 ```bash
 # Open /etc/rc.wakeup with nano
-sudo nano /etc/rc.wakeup
-
-# Add the following line to your /etc/rc.wakeup
-echo "YOUR_PASSWORD" | sudo -S pkill bluetoothd
+sudo nano /etc/rc.sleep
 ```
 
-* You must replace "Your_PASSWORD" into your Sudo password.
+Add the following line to your /etc/rc.sleep
+
+```bash
+#!/bin/sh
+
+sudo pkill bluetoothd
+
+exit 0
+```
+
 
 ---
 
-### **6. Cleanup**
+### **6. Modify sudoer to learn sudo command in automated script**
+
+```bash
+sudo nano /etc/sudoers
+```
+
+```bash
+username ALL=(ALL) NOPASSWD: /etc/rc.sleep
+```
+You may replace username into your account's name
+
+---
+
+### **7. Cleanup (Optional)**
 
 ```bash
 rm ~/sleepwatcher_2.2.1.tgz
