@@ -105,12 +105,3 @@ username ALL=(ALL) NOPASSWD: /etc/rc.sleep pkill
 * You may replace username into your account's name
 
 ---
-
-### **7. Cleanup (Optional)**
-
-```bash
-rm ~/sleepwatcher_2.2.1.tgz
-rm -r ~/sleepwatcher_2.2.1
-```
-
----
