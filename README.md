@@ -67,6 +67,7 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 ```
 
 * It creates placeholder files (rc.wakeup, rc.sleep) that SleepWatcher will look for and run when the system wakes up or goes to sleep.
+
 * rc.wakeup is not necessary
 ---
 
@@ -97,9 +98,9 @@ sudo nano /etc/sudoers
 ```
 
 ```bash
-username ALL=(ALL) NOPASSWD: /etc/rc.sleep
+username ALL=(ALL) NOPASSWD: /etc/rc.sleep pkill
 ```
-You may replace username into your account's name
+* You may replace username into your account's name
 
 ---
 
