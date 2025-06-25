@@ -70,18 +70,18 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 
 * It creates placeholder files (rc.wakeup, rc.sleep) that SleepWatcher will look for and run when the system wakes up or goes to sleep.
 
-* rc.wakeup is not necessary
+* rc.sleep is not necessary, you may skip it
   
 ---
 
-### **5. Modify rc.sleep script to pkill bluetoothd when system wakes up**
+### **5. Modify rc.wakeup script to pkill bluetoothd when system wakes up**
 
 ```bash
 # Open /etc/rc.wakeup with nano
 sudo nano /etc/rc.wakeup
 ```
 
-Add the following line to your /etc/rc.sleep
+Add the following line to your /etc/rc.wakeup
 
 ```bash
 #!/bin/sh
