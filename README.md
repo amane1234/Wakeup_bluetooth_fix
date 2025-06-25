@@ -1,9 +1,8 @@
 # Wakeup_bluetooth_fix
 
-Intelbluetooth in Hackintosh is unstable. After wake up from S3 or S4 sleep, the bluetooth function often does not work properly.
+Intelbluetooth in Hackintosh is unstable. After wake up from S3 or S4 sleep, the bluetooth function might not work properly.
 
-
-It will execute the command 'sudo pkill bluetoothd' when the system wakes up by using SleepWatcher
+To solve this, we will make a script with sleepwatcher that performs "sudo pkill bluetoothd" when systems wakes up, installing Bluesnooze.
 
 ---
 
@@ -72,6 +71,7 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 * It creates placeholder files (rc.wakeup, rc.sleep) that SleepWatcher will look for and run when the system wakes up or goes to sleep.
 
 * rc.wakeup is not necessary
+  
 ---
 
 ### **5. Modify rc.sleep script to pkill bluetoothd when system wakes up**
@@ -90,7 +90,6 @@ sudo pkill bluetoothd
 
 exit 0
 ```
-
 
 ---
 
@@ -115,7 +114,7 @@ username ALL=(ALL) NOPASSWD: /etc/rc.wakeup pkill
 # Install Bluesnooze via Homebrew
 brew install bluesnooze
 ```
-* You may need to run the Bluesnooze app after installation
+* You may need to run the Bluesnooze app manually after its installation
 
 ---
 
