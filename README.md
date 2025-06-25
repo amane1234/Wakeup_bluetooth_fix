@@ -86,6 +86,8 @@ Add the following line to your /etc/rc.wakeup
 ```bash
 #!/bin/sh
 
+Sleep 5
+
 sudo pkill bluetoothd
 
 exit 0
