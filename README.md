@@ -120,7 +120,7 @@ brew install bluesnooze
 
 ---
 
-### **8. Uninstall SleepWatcher (same as #2)**
+## **Uninstall SleepWatcher (same as #2)**
 
 ```bash
 sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 
