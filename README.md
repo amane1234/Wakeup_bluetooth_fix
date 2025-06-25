@@ -36,7 +36,7 @@ tar xvzf sleepwatcher_2.2.1.tgz
 cd sleepwatcher_2.2.1
 ```
 
-* Downloads and extracts the SleepWatcher version 2.2.1 package, you may change the version of Sleepwatcher.
+* You may change the version of Sleepwatcher.
 
 ```bash
 # create folders necessary for installation
