@@ -1,6 +1,9 @@
 # Wakeup_bluetooth_fix
 
-It will execute the command 'sudo pkill bluetoothd' when the system goes sleep by using SleepWatcher
+Intelbluetooth in Hackintosh is unstable. After wake up from S3 or S4 sleep, the bluetooth function often does not work properly.
+
+
+It will execute the command 'sudo pkill bluetoothd' when the system wakes up by using SleepWatcher
 
 ---
 
@@ -71,11 +74,11 @@ sudo chmod +x /etc/rc.sleep /etc/rc.wakeup
 * rc.wakeup is not necessary
 ---
 
-### **5. Modify rc.sleep script to pkill bluetoothd when system goes sleep**
+### **5. Modify rc.sleep script to pkill bluetoothd when system wakes up**
 
 ```bash
 # Open /etc/rc.wakeup with nano
-sudo nano /etc/rc.sleep
+sudo nano /etc/rc.wakeup
 ```
 
 Add the following line to your /etc/rc.sleep
@@ -100,8 +103,30 @@ sudo nano /etc/sudoers
 
 ```bash
 # Add the following line to the suoders
-username ALL=(ALL) NOPASSWD: /etc/rc.sleep pkill
+username ALL=(ALL) NOPASSWD: /etc/rc.wakeup pkill
 ```
 * You may replace username into your account's name
 
+---
+
+### **7. Install Bluesnooze**
+
+```bash
+# Install Bluesnooze via Homebrew
+brew install bluesnooze
+```
+* You may need to run the Bluesnooze app after installation
+
+---
+
+### **8. Uninstall SleepWatcher (same as #2)**
+
+```bash
+sudo launchctl unload /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist 
+launchctl unload ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist
+sudo rm -f /Library/LaunchDaemons/de.bernhard-baehr.sleepwatcher.plist
+rm -f ~/Library/LaunchAgents/de.bernhard-baehr.sleepwatcher.plist
+sudo rm -f /usr/local/sbin/sleepwatcher
+sudo rm -f /usr/local/share/man/man8/sleepwatcher.8
+```
 ---
