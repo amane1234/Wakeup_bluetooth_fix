@@ -4,6 +4,18 @@ Bluetooth in Hackintosh is unstable. After wake up from S3 or S4 sleep, the blue
 
 To solve this, we will make a script with sleepwatcher that performs "sudo pkill bluetoothd" when systems wakes up, installing Bluesnooze.
 
+Try to use Bluesnooze first without script with sleepwatcher, because it sometimes solves the problem alone.
+
+---
+
+### **0. Install Bluesnooze**
+
+```bash
+# Install Bluesnooze via Homebrew
+brew install bluesnooze
+```
+* You may need to run the Bluesnooze app manually after its installation
+
 ---
 
 ### **1. Acquire Sudo Privileges**
@@ -107,16 +119,6 @@ sudo nano /etc/sudoers
 username ALL=(ALL) NOPASSWD: /etc/rc.wakeup pkill
 ```
 * You may replace username into your account's name
-
----
-
-### **7. Install Bluesnooze**
-
-```bash
-# Install Bluesnooze via Homebrew
-brew install bluesnooze
-```
-* You may need to run the Bluesnooze app manually after its installation
 
 ---
 
