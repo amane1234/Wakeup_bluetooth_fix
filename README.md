@@ -2,7 +2,7 @@
 
 Bluetooth in Hackintosh is unstable. After wake up from S3 or S4 sleep, the bluetooth function might not work properly.
 
-To solve this, we will make a script with sleepwatcher that performs "sudo pkill bluetoothd" when systems wakes up, installing Bluesnooze.
+To solve this, we will make a script with sleepwatcher that performs "sudo pkill bluetoothd" when systems wakes up with Bluesnooze
 
 Try to use Bluesnooze first without script with sleepwatcher, because it sometimes solves the problem alone.
 
